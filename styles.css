@@ -757,6 +757,59 @@ section {
   background: #6366f1;
 }
 
+/* Leadership & Activities Section */
+.leadership {
+  background: #f8fafc;
+}
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.leadership-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.07);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: 6px solid #6366f1;
+}
+
+.leadership-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 0.5rem;
+}
+
+.leadership-card p {
+  color: #374151;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.leadership-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.13);
+}
+
+.leadership-card.president {
+  background: linear-gradient(135deg, #6366f1 0%, #a5b4fc 100%);
+  color: white;
+  border-left: 6px solid #f59e42;
+}
+
+.leadership-card.president h3,
+.leadership-card.president p {
+  color: white;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {
@@ -833,6 +886,10 @@ section {
   }
 
   .languages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leadership-grid {
     grid-template-columns: 1fr;
   }
 }
